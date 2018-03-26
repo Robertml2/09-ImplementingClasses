@@ -77,10 +77,11 @@ class Point(object):
         dx = (self.x - p1.x)**2
         dy = (self.y - p1.y)**2
         return math.sqrt(dx +dy)
+
     def get_distance_from_start(self):
-        x = (self.x)**2
-        y = (self.y)**2
-        return math.sqrt(x+y)
+        start = Point(self.x, self.y)
+        return self.get_distance_from(start)
+    
     def closer_to(self, p2, p3):
         if math.sqrt((self.x - p2.x)**2 + (self.y - p2.y)**2) <= math.sqrt((self.x - p3.x)**2 + (self.y - p3.y)**2):
             return p2
