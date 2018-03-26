@@ -81,7 +81,9 @@ class Point(object):
     def get_distance_from_start(self):
         start = Point(self.x, self.y)
         return self.get_distance_from(start)
+
     
+
     def closer_to(self, p2, p3):
         if math.sqrt((self.x - p2.x)**2 + (self.y - p2.y)**2) <= math.sqrt((self.x - p3.x)**2 + (self.y - p3.y)**2):
             return p2
